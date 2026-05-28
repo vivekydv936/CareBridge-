@@ -3,7 +3,8 @@ import axios from 'axios';
 
 const api = axios.create({
   // Use VITE_API_URL if it exists (for production), otherwise fallback to '/api' (for local Vite proxy)
-  baseURL: import.meta.env.VITE_API_URL ? `${import.meta.env.VITE_API_URL}/api` : '/api',
+  // We use .replace(/\/+$/, '') to strip any trailing slashes to prevent Vercel 308 Redirects
+  baseURL: import.meta.env.VITE_API_URL ? `${import.meta.env.VITE_API_URL.replace(/\/+$/, '')}/api` : '/api',
   timeout: 15000,
   headers: { 'Content-Type': 'application/json' },
 });
