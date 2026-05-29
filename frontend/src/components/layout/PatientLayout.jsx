@@ -105,7 +105,7 @@ const PatientLayout = () => {
             </svg>
           </div>
           <div>
-            <p className="font-bold text-white text-base leading-tight">ScriptMD</p>
+            <p className="font-bold text-white text-base leading-tight">CareBridge</p>
             <p className="text-emerald-400 text-xs">Patient Portal</p>
           </div>
         </div>
@@ -237,7 +237,7 @@ const PatientLayout = () => {
                   d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
               </svg>
             </div>
-            <span className="font-bold text-gray-900">ScriptMD</span>
+            <span className="font-bold text-gray-900">CareBridge</span>
           </div>
           <div className="w-9 h-9 rounded-full bg-emerald-500 flex items-center justify-center">
             <span className="text-sm font-bold text-white">

@@ -100,7 +100,7 @@ const ErrorState = ({ message }) => (
         to="/login"
         className="inline-flex items-center gap-2 text-sm font-medium text-white bg-red-600 hover:bg-red-700 px-5 py-2.5 rounded-xl transition"
       >
-        Go to ScriptMD
+        Go to CareBridge
       </Link>
     </div>
   </div>
@@ -148,7 +148,7 @@ const VerifyPrescription = () => {
               <span className="text-white text-sm font-black">Rx</span>
             </div>
             <div>
-              <p className="font-bold text-gray-900 text-sm leading-tight">ScriptMD</p>
+              <p className="font-bold text-gray-900 text-sm leading-tight">CareBridge</p>
               <p className="text-xs text-blue-600 leading-tight">Prescription Verification</p>
             </div>
           </div>
@@ -207,7 +207,7 @@ const VerifyPrescription = () => {
                       d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                       clipRule="evenodd" />
                   </svg>
-                  Digitally Verified by ScriptMD
+                  Digitally Verified by CareBridge
                 </div>
               </div>
             )}
@@ -316,7 +316,7 @@ const VerifyPrescription = () => {
         <div className="bg-gradient-to-r from-blue-900 to-blue-800 rounded-2xl p-5 text-center">
           <p className="text-blue-200 text-xs leading-relaxed">
             This prescription was digitally generated and verified by{' '}
-            <span className="text-white font-semibold">ScriptMD</span>.
+            <span className="text-white font-semibold">CareBridge</span>.
             {' '}Prescription ID: <span className="font-mono text-white">{rx?.shortId}</span>
             {' '}· Scan timestamp: {data?.verifiedAt && new Date(data.verifiedAt).toLocaleString('en-IN')}
           </p>

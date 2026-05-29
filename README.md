@@ -1,4 +1,4 @@
-# ScriptMD — Smart Digital Prescription & Health Record Platform
+# CareBridge — Smart Digital Prescription & Health Record Platform
 
 > A full-stack healthcare platform for digital prescriptions, patient management, QR verification, medicine reminders, and AI-assisted health guidance.
 
@@ -222,7 +222,7 @@ The frontend will start on `http://localhost:5173`
 
 ### 4. Verify Installation
 
-Visit `http://localhost:5173` — you should see the ScriptMD landing page.
+Visit `http://localhost:5173` — you should see the CareBridge landing page.
 
 Check backend health: `http://localhost:5000/api/health`
 
@@ -552,7 +552,7 @@ No auth required. Returns server status, timestamp, and version.
 
 ## 📝 License
 
-MIT © 2024 ScriptMD
+MIT © 2024 CareBridge
 
 ---
 

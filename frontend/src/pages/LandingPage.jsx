@@ -130,7 +130,7 @@ const LandingPage = () => {
                 <span className="text-white font-black text-sm">Rx</span>
               </div>
               <div>
-                <span className={`font-black text-lg leading-tight block ${navScrolled ? 'text-gray-900' : 'text-white'}`}>ScriptMD</span>
+                <span className={`font-black text-lg leading-tight block ${navScrolled ? 'text-gray-900' : 'text-white'}`}>CareBridge</span>
                 <span className={`text-[10px] leading-none ${navScrolled ? 'text-blue-600' : 'text-blue-200'}`}>Digital Health Platform</span>
               </div>
             </div>
@@ -358,7 +358,7 @@ const LandingPage = () => {
               Everything you need for modern healthcare
             </h2>
             <p className="text-gray-500 max-w-2xl mx-auto">
-              From digital prescriptions to AI assistance — ScriptMD brings the entire prescription workflow into one powerful platform.
+              From digital prescriptions to AI assistance — CareBridge brings the entire prescription workflow into one powerful platform.
             </p>
           </div>
 
@@ -486,7 +486,7 @@ const LandingPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <TestimonialCard avatar="R" name="Dr. Rahul Sharma" role="General Physician, Mumbai"
-              text="ScriptMD has completely transformed how I issue prescriptions. The PDF generation with QR codes saves me at least 30 minutes every day. My patients love being able to verify prescriptions on their phones."
+              text="CareBridge has completely transformed how I issue prescriptions. The PDF generation with QR codes saves me at least 30 minutes every day. My patients love being able to verify prescriptions on their phones."
               rating={5} />
             <TestimonialCard avatar="P" name="Priya Mehta" role="Patient, Bangalore"
               text="The medicine reminder emails are a lifesaver! I used to forget my evening dose. Now I get a beautiful email at exactly 8 PM. The AI assistant also helped me understand my diabetes medication."
@@ -501,7 +501,7 @@ const LandingPage = () => {
               text="The prescription creation interface is so smooth. Searching patients, adding multiple medicines — it all flows naturally. The AI widget has also reduced patient calls asking about medication details."
               rating={5} />
             <TestimonialCard avatar="K" name="Kiran Patel" role="Patient, Ahmedabad"
-              text="Downloading my prescription as a PDF and sharing it with my insurance company took seconds. ScriptMD has made healthcare documentation completely stress-free."
+              text="Downloading my prescription as a PDF and sharing it with my insurance company took seconds. CareBridge has made healthcare documentation completely stress-free."
               rating={5} />
           </div>
         </div>
@@ -519,12 +519,12 @@ const LandingPage = () => {
 
           <div className="space-y-3">
             {[
-              { q: 'Is ScriptMD free to use?', a: 'ScriptMD offers a free tier for individuals. Healthcare institutions and larger practices can contact us for enterprise plans with advanced features like team management and custom branding.' },
+              { q: 'Is CareBridge free to use?', a: 'CareBridge offers a free tier for individuals. Healthcare institutions and larger practices can contact us for enterprise plans with advanced features like team management and custom branding.' },
               { q: 'How is patient data kept secure?', a: 'All data is encrypted at rest and in transit using TLS 1.3. We use MongoDB Atlas with enterprise-grade security. Patient data is never shared with third parties and is stored in compliance with healthcare data standards.' },
               { q: 'Can patients see their prescriptions without creating an account?', a: 'Yes! Any prescription can be verified by scanning the QR code — no login required. However, to access full history, reminders, and the AI assistant, patients need a free account.' },
-              { q: 'Does the AI assistant provide medical diagnoses?', a: 'No. The ScriptMD AI Assistant is explicitly designed to NOT provide diagnoses. It explains medicines, suggests general precautions, and summarizes prescriptions. All medical decisions must be made by your licensed doctor.' },
+              { q: 'Does the AI assistant provide medical diagnoses?', a: 'No. The CareBridge AI Assistant is explicitly designed to NOT provide diagnoses. It explains medicines, suggests general precautions, and summarizes prescriptions. All medical decisions must be made by your licensed doctor.' },
               { q: 'How do medicine reminders work?', a: 'Patients set reminder times and select specific days. At the exact minute, our node-cron scheduler automatically sends a beautifully formatted email with medicine details to the patient\'s registered email.' },
-              { q: 'Can I use ScriptMD for multiple clinics?', a: 'Currently, one doctor account works across all your consultations. Multi-clinic support with location tagging is on our roadmap. Contact us for enterprise requirements.' },
+              { q: 'Can I use CareBridge for multiple clinics?', a: 'Currently, one doctor account works across all your consultations. Multi-clinic support with location tagging is on our roadmap. Contact us for enterprise requirements.' },
               { q: 'What happens if a prescription is altered?', a: 'Each prescription has a unique QR code linking to our verification endpoint. Scanning shows the original prescription details stored in our database — any alteration to a printed copy is immediately detectable.' },
             ].map((item, i) => (
               <FAQItem key={i} q={item.q} a={item.a} />
@@ -542,7 +542,7 @@ const LandingPage = () => {
             Ready to modernize your practice?
           </h2>
           <p className="text-blue-200 text-lg mb-8">
-            Join thousands of doctors and patients already using ScriptMD.
+            Join thousands of doctors and patients already using CareBridge.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/register"
@@ -571,12 +571,12 @@ const LandingPage = () => {
                 <span className="text-white font-black text-sm">Rx</span>
               </div>
               <div>
-                <span className="font-black text-white text-base">ScriptMD</span>
+                <span className="font-black text-white text-base">CareBridge</span>
                 <p className="text-gray-500 text-xs">Smart Digital Prescription Platform</p>
               </div>
             </div>
             <p className="text-gray-500 text-sm text-center">
-              © {new Date().getFullYear()} ScriptMD. Built with ❤️ for better healthcare.
+              © {new Date().getFullYear()} CareBridge. Built with ❤️ for better healthcare.
             </p>
             <div className="flex items-center gap-4">
               {['🔒 Secure', '⚡ Fast', '🏥 HIPAA Aligned'].map((t) => (

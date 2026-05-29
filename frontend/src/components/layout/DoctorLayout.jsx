@@ -87,7 +87,7 @@ const DoctorLayout = () => {
             </svg>
           </div>
           <div>
-            <p className="font-bold text-white text-base leading-tight">ScriptMD</p>
+            <p className="font-bold text-white text-base leading-tight">CareBridge</p>
             <p className="text-slate-400 text-xs">Prescription Platform</p>
           </div>
         </div>
@@ -189,7 +189,7 @@ const DoctorLayout = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
-          <span className="font-bold text-gray-900">ScriptMD</span>
+          <span className="font-bold text-gray-900">CareBridge</span>
           <div className="w-9 h-9 rounded-full bg-primary-500 flex items-center justify-center">
             <span className="text-sm font-bold text-white">
               {user?.name?.charAt(0).toUpperCase()}

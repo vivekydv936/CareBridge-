@@ -43,7 +43,7 @@ const buildReminderHTML = ({ medicineName, dosage, notes, time, patientName }) =
               <tr>
                 <td align="center">
                   <div style="display:inline-block;background:rgba(255,255,255,0.15);border-radius:12px;padding:10px 18px;margin-bottom:12px;">
-                    <span style="color:#fff;font-size:22px;font-weight:900;letter-spacing:1px;">Rx ScriptMD</span>
+                    <span style="color:#fff;font-size:22px;font-weight:900;letter-spacing:1px;">Rx CareBridge</span>
                   </div>
                   <div style="color:#93c5fd;font-size:12px;font-weight:500;">Smart Digital Prescription Platform</div>
                 </td>
@@ -152,10 +152,10 @@ const buildReminderHTML = ({ medicineName, dosage, notes, time, patientName }) =
         <tr>
           <td style="background:#1e3a8a;border-radius:0 0 16px 16px;padding:20px 32px;text-align:center;">
             <p style="margin:0 0 6px;color:#93c5fd;font-size:12px;">
-              This is an automated reminder from <strong style="color:#fff;">ScriptMD</strong>.
+              This is an automated reminder from <strong style="color:#fff;">CareBridge</strong>.
             </p>
             <p style="margin:0;color:#60a5fa;font-size:11px;">
-              To manage your reminders, log in at <a href="${process.env.CLIENT_URL || 'http://localhost:5173'}" style="color:#93c5fd;">ScriptMD Platform</a>
+              To manage your reminders, log in at <a href="${process.env.CLIENT_URL || 'http://localhost:5173'}" style="color:#93c5fd;">CareBridge Platform</a>
             </p>
           </td>
         </tr>
@@ -188,7 +188,7 @@ const sendReminderEmail = async ({ to, patientName, medicineName, dosage, notes,
   })();
 
   const info = await transporter.sendMail({
-    from:    `"ScriptMD 💊" <${process.env.SMTP_USER}>`,
+    from:    `"CareBridge 💊" <${process.env.SMTP_USER}>`,
     to,
     subject: `⏰ Medicine Reminder: ${medicineName} at ${formattedTime}`,
     html:    buildReminderHTML({ medicineName, dosage, notes, time: formattedTime, patientName }),
@@ -212,7 +212,7 @@ const sendPasswordResetOtpEmail = async (to, otp) => {
     <div style="max-width:560px;margin:0 auto;background:#fff;padding:32px;border-radius:16px;margin-top:32px;">
       <h2 style="color:#1e293b;margin-bottom:16px;text-align:center;">Password Reset Request</h2>
       <p style="color:#64748b;font-size:15px;line-height:1.6;margin-bottom:24px;text-align:center;">
-        We received a request to reset your ScriptMD password. Enter the following 6-digit code to continue:
+        We received a request to reset your CareBridge password. Enter the following 6-digit code to continue:
       </p>
       <div style="background:#eff6ff;padding:20px;border-radius:12px;text-align:center;margin-bottom:24px;">
         <span style="font-size:32px;font-weight:900;letter-spacing:6px;color:#1d4ed8;">${otp}</span>
@@ -226,11 +226,11 @@ const sendPasswordResetOtpEmail = async (to, otp) => {
   `;
 
   return transporter.sendMail({
-    from:    `"ScriptMD Security 🔒" <${process.env.SMTP_USER}>`,
+    from:    `"CareBridge Security 🔒" <${process.env.SMTP_USER}>`,
     to,
-    subject: `Your ScriptMD Password Reset Code: ${otp}`,
+    subject: `Your CareBridge Password Reset Code: ${otp}`,
     html,
-    text:    `Your ScriptMD password reset code is: ${otp}\n\nThis code expires in 10 minutes.`,
+    text:    `Your CareBridge password reset code is: ${otp}\n\nThis code expires in 10 minutes.`,
   });
 };
 

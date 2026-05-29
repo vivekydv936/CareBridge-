@@ -117,7 +117,7 @@ const getRuleBasedResponse = async (message, isAuthenticated) => {
   // ── Greetings ────────────────────────────────────────────────────────────────
   if (GREETING_KEYWORDS.some((k) => lower.startsWith(k))) {
     return {
-      text: `Hello! 👋 I'm the ScriptMD AI Assistant. I can help you:\n\n• 💊 Explain medicines\n• ⚠️ Suggest precautions\n• 📋 Summarize your prescription\n\n*I do not provide diagnoses. Always consult your doctor for medical advice.*\n\nWhat can I help you with today?`,
+      text: `Hello! 👋 I'm the CareBridge AI Assistant. I can help you:\n\n• 💊 Explain medicines\n• ⚠️ Suggest precautions\n• 📋 Summarize your prescription\n\n*I do not provide diagnoses. Always consult your doctor for medical advice.*\n\nWhat can I help you with today?`,
       type: 'info',
     };
   }
@@ -130,7 +130,7 @@ const getRuleBasedResponse = async (message, isAuthenticated) => {
   // ── Diagnosis block ───────────────────────────────────────────────────────────
   if (DIAGNOSIS_KEYWORDS.some((k) => lower.includes(k))) {
     return {
-      text: `⚠️ **I'm unable to provide diagnosis.**\n\nScriptMD AI is designed to explain medicines and suggest precautions — not to diagnose medical conditions.\n\n**Please consult your doctor** for any concerns about your health. If this is an emergency, call emergency services immediately.`,
+      text: `⚠️ **I'm unable to provide diagnosis.**\n\nCareBridge AI is designed to explain medicines and suggest precautions — not to diagnose medical conditions.\n\n**Please consult your doctor** for any concerns about your health. If this is an emergency, call emergency services immediately.`,
       type: 'warning',
     };
   }
@@ -138,7 +138,7 @@ const getRuleBasedResponse = async (message, isAuthenticated) => {
   // ── Prescription summarize ────────────────────────────────────────────────────
   if (lower.includes('summarize') || lower.includes('my prescription') || lower.includes('latest prescription')) {
     if (!isAuthenticated) {
-      return { text: `🔒 Please **log in** to your ScriptMD account to summarize your prescription. Once logged in, I can pull your latest prescription details.`, type: 'warning' };
+      return { text: `🔒 Please **log in** to your CareBridge account to summarize your prescription. Once logged in, I can pull your latest prescription details.`, type: 'warning' };
     }
     try {
       const res = await api.get('/prescriptions?limit=1');
@@ -296,7 +296,7 @@ const AIAssistantWidget = () => {
   const [messages, setMessages] = useState([
     {
       role: 'bot',
-      text: `Hi! I'm your ScriptMD AI Assistant. 👋\n\nI can **explain medicines**, suggest **precautions**, and **summarize** your prescriptions.\n\n*Note: I do not provide medical diagnoses.*`,
+      text: `Hi! I'm your CareBridge AI Assistant. 👋\n\nI can **explain medicines**, suggest **precautions**, and **summarize** your prescriptions.\n\n*Note: I do not provide medical diagnoses.*`,
       ts: Date.now(),
     },
   ]);
@@ -355,7 +355,7 @@ const AIAssistantWidget = () => {
                 </svg>
               </div>
               <div>
-                <p className="text-white text-sm font-bold leading-tight">ScriptMD AI</p>
+                <p className="text-white text-sm font-bold leading-tight">CareBridge AI</p>
                 <div className="flex items-center gap-1">
                   <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
                   <span className="text-green-300 text-[10px]">Online</span>
@@ -432,7 +432,7 @@ const AIAssistantWidget = () => {
         id="ai-widget-toggle"
         onClick={() => setOpen((v) => !v)}
         className="relative w-14 h-14 rounded-full bg-gradient-to-br from-blue-600 to-violet-700 shadow-xl hover:shadow-2xl hover:scale-110 active:scale-95 transition-all duration-200 flex items-center justify-center group"
-        title="ScriptMD AI Assistant"
+        title="CareBridge AI Assistant"
       >
         {/* Pulse ring */}
         {!open && (
