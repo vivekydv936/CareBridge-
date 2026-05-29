@@ -25,23 +25,23 @@
 ## ✨ Features
 
 ### For Doctors
-- 📋 **Digital Prescriptions** — Create, update, delete prescriptions with dynamic medicine fields
-- 🔍 **Patient Search** — Real-time patient search with debouncing
-- 📄 **PDF Generation** — Professional PDFs with QR codes, doctor signature, and hospital branding
-- 📊 **Analytics Dashboard** — Charts for monthly trends, top diagnoses, medicine frequency
-- 👥 **Patient Records** — Full patient management with history
+- 📋 **Issue Prescriptions** — Create digital prescriptions that include patient age, diagnosis, medicines, doctor's notes, and a digital signature.
+- 📄 **PDF Download & QR Verification** — Download the prescription as a professional PDF. Anyone can scan the embedded QR code from the PDF to instantly verify its authenticity online.
+- 🔍 **Patient Search** — Real-time patient search to securely assign prescriptions.
+- 📊 **Analytics Dashboard** — Charts for monthly trends, top diagnoses, and medicine frequency.
+- 👥 **Patient Records** — Full patient management and history tracking.
 
 ### For Patients
-- 🕐 **Medical Timeline** — Visual history of all prescriptions and visits
-- ⏰ **Medicine Reminders** — Daily email reminders via automated scheduler
-- 📱 **QR Verification** — Scan prescription QR to verify authenticity (no login needed)
-- 📈 **Personal Analytics** — Health trend charts and prescription stats
-- 🤖 **AI Assistant** — Explains medicines, suggests precautions, summarizes prescriptions
+- 📋 **Patient Dashboard** — A dedicated dashboard to securely view all prescriptions issued by doctors.
+- ⏰ **Medicine Reminders (Cron Jobs)** — Automated background Cron jobs that send scheduled email notifications to the patient at their exact prescribed medicine times.
+- 🤖 **AI Agent (Powered by Gemini)** — A built-in AI chat agent using the Google Gemini API where patients can ask any questions related to their medicines, get precautions, and summarize prescriptions.
+- 🕐 **Medical Timeline** — A visual chronological history of all past prescriptions and doctor visits.
+- 📱 **Public QR Verification** — Scan a prescription QR code to verify its details (no login required for verification).
 
-### Platform
-- 🔐 **JWT Authentication** — Role-based access (doctor/patient)
-- 🔒 **Security** — Helmet, rate limiting, bcrypt, CORS
-- ☁️ **Cloud Ready** — MongoDB Atlas, deployable to Render + Vercel
+### Platform Architecture
+- 🔐 **Role-Based Auth** — Two distinct user types (Doctor and Patient) with separate secure login portals.
+- 🔒 **Security** — JWT Authentication, Helmet, rate limiting, bcrypt password hashing, and CORS.
+- ☁️ **Cloud Ready** — MongoDB Atlas, deployable to Render (Backend) and Vercel (Frontend).
 
 ---
 
@@ -168,6 +168,18 @@ jaypee-project/
 ```
 
 ---
+## Overview images
+![alt text](<Screenshot 2026-05-29 165353.png>)
+![alt text](<Screenshot 2026-05-29 165343.png>)
+![alt text](<Screenshot 2026-05-29 165331.png>) 
+![alt text](<Screenshot 2026-05-29 165319.png>)
+![alt text](<Screenshot 2026-05-29 165304.png>)
+![alt text](<Screenshot 2026-05-29 165213.png>)
+![alt text](<Screenshot 2026-05-29 165201.png>)
+![alt text](<Screenshot 2026-05-29 165152.png>)
+![alt text](<Screenshot 2026-05-29 165145.png>)
+![alt text](<Screenshot 2026-05-29 165133.png>)
+
 
 ## 🚀 Quick Start
 
